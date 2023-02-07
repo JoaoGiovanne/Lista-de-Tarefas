@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 80%;
+    height: 3.5em;
+    margin: 0 auto;
+    border-bottom: 1.5px solid rgb(99, 99, 99);
+}
+
+h1 {
+    margin-top: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 230%;
+}
+
+.grand-container {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#txtTaf {
+    margin-top: 5em;
+    width: 15em;
+    height: 2em;
+    margin-left: 0.5em;
+}
+
+#numDate {
+    margin-top: 2em;
+    width: 15em;
+    height: 2em;
+    margin-left: 0.9em;
+}
+
+#botao {
+    margin-top: 2em;
+    width: 20em;
+    height: 2em;
+    background-color: green;
+    border-radius: 5px;
+    border: 0.5px solid #000;
+    color: #fff;
+}
+
+.container {
+    width: 25%;
+    margin-top: 1.5em;
+}
+
+.conteudo, .conteudo2 {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 2.4em;
+    border-bottom: 1px solid #000;
+}
+
+.conteudo2 {
+    margin-bottom: 1em;
+}
+
+.botao2 {
+    float: right;
+    background-color: green;
+    border: 0.5px solid #000;
+    color: #fff;
+    width: 4em;
+    height: 1.9em;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#pagCont {
+    font-size: 93%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fieldset_cont {
+    border-radius: 10px;
+    border: 2px solid rgb(19, 179, 19);
+}
+
+#legend-1 {
+    padding: 0px 10px 0px 10px;
+    margin-left: 2.5em;
+    font-size: 120%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: green;
+}
+
+#date2 {
+    margin-top: 2em;
+    width: 50%;
+    height: 80%;
+    border: 0;
+    margin-bottom: 1.2em;
+}
+
+.checkbox {
+    margin-left: 7.7em;
+    margin-right: 1em;
+}
