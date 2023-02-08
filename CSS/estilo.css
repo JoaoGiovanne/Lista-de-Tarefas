@@ -51,31 +51,36 @@ h1 {
     cursor: pointer;
 }
 
-.container-left, .container-center, .container-rigth  {
+.container-left, .container-center, .container-rigth {
     width: 25%;
     margin-top: 3em;
     float: left;
 }
 
-.container-center, .container-rigth{
+.container-center, .container-rigth {
     margin-left: 5em;
 }
 
 
 .conteudo, .conteudo2 {
     width: 85%;
-    margin: 0 auto;
-    padding-top: 2.4em;
-    border-bottom: 1px solid #000;
+    margin-left: 7.5%;
+    margin-top: 2em;
+    border-bottom: 1px solid #91919196;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .conteudo2 {
-    margin-bottom: 1em;
+    margin-bottom: 0.7em;
 }
 
 .botao2 {
     float: right;
-    background-color: green;
+    margin-top: 2em;
+    margin-right: 10%;
+    background-color: rgb(12, 165, 12);
     border: 0.5px solid #000;
     color: #fff;
     width: 4em;
@@ -94,11 +99,11 @@ h1 {
     border: 2px solid rgb(19, 179, 19);
 }
 
-.fieldset_atrasado{
+.fieldset_atrasado {
     border: 2px solid rgb(179, 19, 19);
 }
 
-.fieldset_completo{
+.fieldset_completo {
     border: 2px solid rgb(32, 0, 175);
 }
 
@@ -110,23 +115,34 @@ h1 {
     color: green;
 }
 
-#legend-2{
+#legend-2 {
     color: rgb(179, 19, 19);
 }
 
-#legend-3{
+#legend-3 {
     color: rgb(32, 0, 175);
 }
 
 #date2 {
-    margin-top: 2em;
     width: 50%;
     height: 80%;
     border: 0;
     margin-bottom: 1.2em;
+
+}
+
+.checkbox-input, .conteudo2 {
+    display: inline-block;
 }
 
 .checkbox {
-    
+    vertical-align: middle;
+    margin-right: 4.7px;
+    margin-bottom: 3px;
 }
 
+.checkbox-input {
+    float: right;
+}
+
+.finalizado {}
