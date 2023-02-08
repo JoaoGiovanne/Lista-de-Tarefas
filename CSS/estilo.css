@@ -48,12 +48,19 @@ h1 {
     border-radius: 5px;
     border: 0.5px solid #000;
     color: #fff;
+    cursor: pointer;
 }
 
-.container {
+.container-left, .container-center, .container-rigth  {
     width: 25%;
-    margin-top: 1.5em;
+    margin-top: 3em;
+    float: left;
 }
+
+.container-center, .container-rigth{
+    margin-left: 5em;
+}
+
 
 .conteudo, .conteudo2 {
     width: 85%;
@@ -82,17 +89,33 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.fieldset_cont {
+.fieldset_noPrazo, .fieldset_completo, .fieldset_atrasado {
     border-radius: 10px;
     border: 2px solid rgb(19, 179, 19);
 }
 
-#legend-1 {
-    padding: 0px 10px 0px 10px;
+.fieldset_atrasado{
+    border: 2px solid rgb(179, 19, 19);
+}
+
+.fieldset_completo{
+    border: 2px solid rgb(32, 0, 175);
+}
+
+#legend-1, #legend-2, #legend-3 {
+    padding: 0px 35px 0px 10px;
     margin-left: 2.5em;
     font-size: 120%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: green;
+}
+
+#legend-2{
+    color: rgb(179, 19, 19);
+}
+
+#legend-3{
+    color: rgb(32, 0, 175);
 }
 
 #date2 {
@@ -104,6 +127,6 @@ h1 {
 }
 
 .checkbox {
-    margin-left: 7.7em;
-    margin-right: 1em;
+    
 }
+

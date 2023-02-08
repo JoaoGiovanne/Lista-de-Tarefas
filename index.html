@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-    <title>titulo do documento</title>
+    <title>Lista de Tarefas</title>
     </meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
 </head>
@@ -23,25 +23,52 @@
         <input type="button" id="botao" value="Salvar">
         <br>
 
-        <div class="container">
-            <fieldset class="fieldset_cont">
+        <div class="container-left">
+            <fieldset class="fieldset_noPrazo">
                 <legend id="legend-1">NO PRAZO</legend>
                 <div class="conteudo">
                     <input type="button" class="botao2" value="Editar">
-                    <h3 id="pagCont">Pagar contas</h3>
+                    <h3 id="pagCont"></h3>
                     <br>
                     <input type="date" name="date2" id="date2">
                     <input type="checkbox" name="checkbox" class="checkbox"> Finalizado
                 </div>
                 <div class="conteudo2">
                     <input type="button" class="botao2" value="Editar">
-                    <h3 id="pagCont">Pagar contas</h3>
+                    <h3 id="pagCont"></h3>
                     <br>
                     <input type="date" name="date2" id="date2">
                     <input type="checkbox" name="checkbox" class="checkbox"> Finalizado
                 </div>
             </fieldset>
         </div>
+
+        <div class="container-center">
+            <fieldset class="fieldset_atrasado">
+                <legend id="legend-2">ATRASADO</legend>
+                <div class="conteudo2">
+                    <input type="button" class="botao2" value="Editar">
+                    <h3 id="pagCont"></h3>
+                    <br>
+                    <input type="date" name="date2" id="date2">
+                    <input type="checkbox" name="checkbox" class="checkbox"> Finalizado
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="container-rigth">
+            <fieldset class="fieldset_completo">
+                <legend id="legend-3">COMPLETO</legend>
+                <div class="conteudo2">
+                    <input type="button" class="botao2" value="Editar">
+                    <h3 id="pagCont"></h3>
+                    <br>
+                    <input type="date" name="date2" id="date2">
+                    <input type="checkbox" name="checkbox" class="checkbox"> Finalizado
+                </div>
+            </fieldset>
+        </div>
+
     </div>
 </body>
 
