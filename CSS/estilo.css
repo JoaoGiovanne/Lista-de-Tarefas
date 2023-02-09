@@ -67,9 +67,7 @@ h1 {
     margin-left: 7.5%;
     margin-top: 2em;
     border-bottom: 1px solid #91919196;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     margin-bottom: 0.7em;
 }
 
@@ -124,12 +122,14 @@ h1 {
     width: 50%;
     height: 80%;
     border: 0;
-    margin-bottom: 1.2em;
-
 }
 
-.checkbox-input, .conteudo {
-    display: inline-block;
+.conteudo, .checkbox-input {
+    margin-bottom: 1em;
+}
+
+.checkbox-input {
+    float: right;
 }
 
 .checkbox {
