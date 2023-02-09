@@ -136,4 +136,6 @@ h1 {
     vertical-align: middle;
     margin-right: 4.7px;
     margin-bottom: 3px;
+    display: inline-flex;
+    margin-left: 8.5em;
 }
