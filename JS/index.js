@@ -1,7 +1,7 @@
-var today = new Date();
-const current_day = today.getDate();
-const current_month = today.getMonth() + 1;
-const current_year = today.getFullYear();
+const today = new Date();
+let current_day = today.getDate();
+let current_month = today.getMonth() + 1;
+let current_year = today.getFullYear();
 const button = document.getElementById('botao');
 
 button.addEventListener('click', function () {
@@ -11,8 +11,6 @@ button.addEventListener('click', function () {
     let term_day = date.getDate() + 1;
     let term_month = date.getMonth() + 1;
     let term_year = date.getFullYear();
-
-
 
     if (term_day == 31) { // mes terminado em dia 30
         if (term_month == 4 || term_month == 6 || term_month == 9 || term_month == 11) {
@@ -33,7 +31,7 @@ button.addEventListener('click', function () {
             term_month++;
         }
     }
-    if (term_month > 12) {
+    if (term_month > 12) { // alterar ano
         term_month = 1;
         term_year++;
     }
