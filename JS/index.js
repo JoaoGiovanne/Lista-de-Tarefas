@@ -6,7 +6,7 @@ const button = document.getElementById('botao');
 
 button.addEventListener('click', function () {
 
-    const term = document.querySelector('#numDate').value;
+    let term = document.getElementById('numDate').value;
     let date = new Date(term);
     let term_day = date.getDate() + 1;
     let term_month = date.getMonth() + 1;
@@ -38,6 +38,9 @@ button.addEventListener('click', function () {
     console.log(term_day);
     console.log(term_month);
     console.log(term_year);
+
+    document.getElementById('numDate').value = "dd/mm/aaaa";
+
 });
 
 
