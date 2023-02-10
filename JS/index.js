@@ -25,8 +25,8 @@ button.addEventListener('click', function () {
         }
     }
     // mes de fevereiro
-    if (term_month === 2) {
-        if (term_day === 29) {
+    if (term_month == 2) {
+        if (term_day == 29) {
             term_day = 1;
             term_month++;
         }
