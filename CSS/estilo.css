@@ -51,13 +51,13 @@ h1 {
     cursor: pointer;
 }
 
-.container-left, .container-center, .container-rigth {
+#container-left, #container-center, #container-rigth {
     width: 25%;
     margin-top: 3em;
     float: left;
 }
 
-.container-center, .container-rigth {
+#container-center, #container-rigth {
     margin-left: 5em;
 }
 
@@ -84,21 +84,21 @@ h1 {
     cursor: pointer;
 }
 
-#pagCont {
+.pagCont {
     font-size: 93%;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.fieldset_noPrazo, .fieldset_completo, .fieldset_atrasado {
+#fieldset_noPrazo, #fieldset_completo, #fieldset_atrasado {
     border-radius: 10px;
     border: 2px solid rgb(19, 179, 19);
 }
 
-.fieldset_atrasado {
+#fieldset_atrasado {
     border: 2px solid rgb(179, 19, 19);
 }
 
-.fieldset_completo {
+#fieldset_completo {
     border: 2px solid rgb(32, 0, 175);
 }
 
@@ -136,4 +136,10 @@ h1 {
     vertical-align: middle;
     margin-right: 4.7px;
     margin-bottom: 3px;
+}
+
+#task {
+    width: 25%;
+    position: absolute;
+    margin-left: 45%;
 }

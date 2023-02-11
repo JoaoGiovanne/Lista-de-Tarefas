@@ -1,8 +1,21 @@
-const today = new Date();
+// pegando ano atual do pc
+let today = new Date();
 let current_day = today.getDate();
 let current_month = today.getMonth() + 1;
 let current_year = today.getFullYear();
+
 const button = document.getElementById('botao');
+
+// lendo e armazenando os fieldsets e as divs de conteudo
+const field_np = document.getElementById('fieldset_noPrazo');
+const field_at = document.getElementById('fieldset_atrasado');
+const field_cp = document.getElementById('fieldset_completo');
+const div = document.createElement('div');
+
+//  criando elementos do conteudo
+
+const tarefa = document.createElement('h3');
+
 
 button.addEventListener('click', function () {
 
@@ -35,12 +48,26 @@ button.addEventListener('click', function () {
         term_month = 1;
         term_year++;
     }
-    console.log(term_day);
-    console.log(term_month);
-    console.log(term_year);
 
     document.getElementById('numDate').value = "dd/mm/aaaa";
 
+    const nome_tarefa = document.getElementById('txtTaf').value;
+
+
+    if (current_year > term_year) { // current -> referente ao dia, mes e ano atual, term -> referente ao prazo digitado(dia, mes e)
+        field_at.appendChild(div);
+        div.classList.add('conteudo');
+
+        div.appendChild(tarefa);
+        tarefa.classList.add("pagCont");
+        tarefa.innerHTML = nome_tarefa;
+
+
+    } else if (current_month > term_month) {
+        console.log("mes atrasado");
+    } else if (current_day > term_day) {
+        console.log("dia atrasado");
+    }
 });
 
 
