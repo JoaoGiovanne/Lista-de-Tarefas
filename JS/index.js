@@ -60,7 +60,7 @@ button.addEventListener('click', function () {
 
     if (current_year > term_year) { // current -> referente ao dia, mes e ano atual, term -> referente ao prazo digitado(dia, mes e)
         field_at.appendChild(div);
-        div.getElementById.add('conteudoAtra');
+        div.setAttribute('id', 'conteudoAtra')
 
         div.appendChild(tarefa);
         tarefa.classList.add("pagCont");
@@ -91,8 +91,8 @@ button.addEventListener('click', function () {
     } else if (current_month > term_month) {
 
         field_at.appendChild(div);
-        div.getElementById.add('conteudoAtra');
-        
+        div.setAttribute('id', 'conteudoAtra')
+
         div.appendChild(tarefa);
         tarefa.classList.add("pagCont");
         tarefa.innerHTML = nome_tarefa;
@@ -123,7 +123,7 @@ button.addEventListener('click', function () {
     } else if (current_month == term_month) {
         if (current_day > term_day) {
             field_at.appendChild(div);
-            div.getElementById.add('conteudoPraz');
+            div.setAttribute('id', 'conteudoAtra')
 
             div.appendChild(tarefa);
             tarefa.classList.add("pagCont");
@@ -149,7 +149,7 @@ button.addEventListener('click', function () {
             console.log('abc');
         } else {
             field_np.appendChild(div);
-            div.classList.add('conteudoAtra');
+            div.setAttribute('id', 'conteudoPraz')
 
             div.appendChild(tarefa);
             tarefa.classList.add("pagCont");
@@ -175,14 +175,6 @@ button.addEventListener('click', function () {
             console.log('abc');
         }
     }
-
-    checkbox.addEventListener("click", function() {
-        if (checkbox.checked) {
-            field_cp.appendChild('conteudoCompl');
-        } else {
-            field_at.appendChild('conteudoAtra');
-        }
-      });
 });
 
 
