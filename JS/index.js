@@ -53,11 +53,14 @@ button.addEventListener('click', function () {
 
     const nome_tarefa = document.getElementById('txtTaf').value;
     const Editar = document.querySelector('.botao2');
+    const contAtra = document.getElementById('conteudoAtra');
+    const contProz = document.getElementById('conteudoPraz');
+    const conteudoComp = document.getElementById('conteudoCompl');
 
 
     if (current_year > term_year) { // current -> referente ao dia, mes e ano atual, term -> referente ao prazo digitado(dia, mes e)
         field_at.appendChild(div);
-        div.classList.add('conteudo');
+        div.getElementById.add('conteudoAtra');
 
         div.appendChild(tarefa);
         tarefa.classList.add("pagCont");
@@ -88,8 +91,8 @@ button.addEventListener('click', function () {
     } else if (current_month > term_month) {
 
         field_at.appendChild(div);
-        div.classList.add('conteudo');
-
+        div.getElementById.add('conteudoAtra');
+        
         div.appendChild(tarefa);
         tarefa.classList.add("pagCont");
         tarefa.innerHTML = nome_tarefa;
@@ -116,10 +119,11 @@ button.addEventListener('click', function () {
         //input.type = 'button';
         //input.setAttribute('class', 'botao2');
         //field_at.appendChild(Editar)
+
     } else if (current_month == term_month) {
         if (current_day > term_day) {
             field_at.appendChild(div);
-            div.classList.add('conteudo');
+            div.getElementById.add('conteudoPraz');
 
             div.appendChild(tarefa);
             tarefa.classList.add("pagCont");
@@ -145,7 +149,7 @@ button.addEventListener('click', function () {
             console.log('abc');
         } else {
             field_np.appendChild(div);
-            div.classList.add('conteudo');
+            div.classList.add('conteudoAtra');
 
             div.appendChild(tarefa);
             tarefa.classList.add("pagCont");
@@ -171,6 +175,14 @@ button.addEventListener('click', function () {
             console.log('abc');
         }
     }
+
+    checkbox.addEventListener("click", function() {
+        if (checkbox.checked) {
+            field_cp.appendChild('conteudoCompl');
+        } else {
+            field_at.appendChild('conteudoAtra');
+        }
+      });
 });
 
 

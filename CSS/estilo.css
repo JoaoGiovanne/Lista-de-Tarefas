@@ -62,7 +62,7 @@ h1 {
 }
 
 
-.conteudo {
+#conteudoAtra, #conteudoPraz, #conteudoCompl {
     width: 85%;
     margin-left: 7.5%;
     margin-top: 1em;
