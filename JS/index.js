@@ -62,6 +62,10 @@ button.addEventListener('click', function () {
         tarefa.classList.add("pagCont");
         tarefa.innerHTML = nome_tarefa;
 
+        const br = document.createElement('br');
+        div.appendChild(br);
+
+        document.createElement('input');
 
     } else if (current_month > term_month) {
         console.log("mes atrasado");
