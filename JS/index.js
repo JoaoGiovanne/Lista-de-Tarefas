@@ -61,6 +61,15 @@ button.addEventListener('click', function () {
         div.appendChild(tarefa);
         tarefa.classList.add("pagCont");
         tarefa.innerHTML = nome_tarefa;
+        const br = document.createElement('br');
+        div.appendChild(br);
+        
+        const input = document.createElement('input'); 
+        input.type = 'date';
+        input.name = 'date2';
+        input.setAttribute('id', 'date2');
+        div.appendChild(input);
+
 
 
     } else if (current_month > term_month) {
@@ -68,6 +77,7 @@ button.addEventListener('click', function () {
     } else if (current_day > term_day) {
         console.log("dia atrasado");
     }
+
 });
 
 
