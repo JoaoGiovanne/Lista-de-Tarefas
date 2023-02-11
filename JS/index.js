@@ -15,6 +15,7 @@ const div = document.createElement('div');
 //  criando elementos do conteudo
 
 const tarefa = document.createElement('h3');
+spfin = document.getElementsByTagName('span');
 
 button.addEventListener('click', function () {
 
@@ -65,18 +66,28 @@ button.addEventListener('click', function () {
 
         const input = document.createElement('input');
         input.type = 'date';
-        input.name = 'date2';
-        input.setAttribute('id', 'date2');
+        input.setAttribute('class', 'date2');
         div.appendChild(input);
 
-        document.createElement('input');
+        const checkbox = document.createElement('input');
+        checkbox.setAttribute('type', 'checkbox');
+        div.appendChild(checkbox);
+        checkbox.classList.add('checkbox');
+
+
+        spfin = document.createElement('span');
+        div.appendChild(spfin);
+        texto = document.createTextNode('Finalizado');
+        spfin.appendChild(texto);
+        spfin.classList.add('finalizado');
+
+
 
     } else if (current_month > term_month) {
         console.log("mes atrasado");
     } else if (current_day > term_day) {
         console.log("dia atrasado");
     }
-
 });
 
 

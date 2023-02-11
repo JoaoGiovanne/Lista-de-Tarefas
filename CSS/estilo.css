@@ -67,7 +67,6 @@ h1 {
     margin-left: 7.5%;
     margin-top: 1em;
     border-bottom: 1px solid #91919196;
-    display: inline-block;
     margin-bottom: 0.7em;
 }
 
@@ -118,10 +117,10 @@ h1 {
     color: rgb(32, 0, 175);
 }
 
-#date2 {
+.date2 {
     width: 50%;
-    height: 80%;
     border: 0;
+    padding-right: 32px;
 }
 
 .conteudo, .checkbox-input {
@@ -129,13 +128,17 @@ h1 {
 }
 
 .checkbox-input {
-    float: right;
+    margin-left: 1%;
 }
 
 .checkbox {
-    vertical-align: middle;
-    margin-right: 4.7px;
-    margin-bottom: 3px;
+    position: relative;
+    margin-top: 1.5px;
+    margin-left: 15%;
+}
+
+.finalizado {
+    float: right;
 }
 
 #task {
