@@ -55,7 +55,6 @@ button.addEventListener('click', function () {
     const Editar = document.querySelector('.botao2');
 
 
-
     if (current_year > term_year) { // current -> referente ao dia, mes e ano atual, term -> referente ao prazo digitado(dia, mes e)
         field_at.appendChild(div);
         div.classList.add('conteudo');
@@ -86,13 +85,8 @@ button.addEventListener('click', function () {
         //input.type = 'button';
         //input.setAttribute('class', 'botao2');
         //field_at.appendChild(Editar)
-        
+    } else if (current_month > term_month) {
 
-
-
-
-    } else if (current_month >= term_month) {
-        
         field_at.appendChild(div);
         div.classList.add('conteudo');
 
@@ -122,8 +116,60 @@ button.addEventListener('click', function () {
         //input.type = 'button';
         //input.setAttribute('class', 'botao2');
         //field_at.appendChild(Editar)
-    } else if (current_day > term_day) {
-        console.log("dia atrasado");
+    } else if (current_month == term_month) {
+        if (current_day > term_day) {
+            field_at.appendChild(div);
+            div.classList.add('conteudo');
+
+            div.appendChild(tarefa);
+            tarefa.classList.add("pagCont");
+            tarefa.innerHTML = nome_tarefa;
+            const br = document.createElement('br');
+            div.appendChild(br);
+
+            const input = document.createElement('input');
+            input.type = 'date';
+            input.setAttribute('class', 'date2');
+            div.appendChild(input);
+
+            const checkbox = document.createElement('input');
+            checkbox.setAttribute('type', 'checkbox');
+            div.appendChild(checkbox);
+            checkbox.classList.add('checkbox');
+
+            spfin = document.createElement('span');
+            div.appendChild(spfin);
+            texto = document.createTextNode('Finalizado');
+            spfin.appendChild(texto);
+            spfin.classList.add('finalizado');
+            console.log('abc');
+        } else {
+            field_np.appendChild(div);
+            div.classList.add('conteudo');
+
+            div.appendChild(tarefa);
+            tarefa.classList.add("pagCont");
+            tarefa.innerHTML = nome_tarefa;
+            const br = document.createElement('br');
+            div.appendChild(br);
+
+            const input = document.createElement('input');
+            input.type = 'date';
+            input.setAttribute('class', 'date2');
+            div.appendChild(input);
+
+            const checkbox = document.createElement('input');
+            checkbox.setAttribute('type', 'checkbox');
+            div.appendChild(checkbox);
+            checkbox.classList.add('checkbox');
+
+            spfin = document.createElement('span');
+            div.appendChild(spfin);
+            texto = document.createTextNode('Finalizado');
+            spfin.appendChild(texto);
+            spfin.classList.add('finalizado');
+            console.log('abc');
+        }
     }
 });
 
