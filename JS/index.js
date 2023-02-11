@@ -16,7 +16,6 @@ const div = document.createElement('div');
 
 const tarefa = document.createElement('h3');
 
-
 button.addEventListener('click', function () {
 
     let term = document.getElementById('numDate').value;
@@ -63,16 +62,12 @@ button.addEventListener('click', function () {
         tarefa.innerHTML = nome_tarefa;
         const br = document.createElement('br');
         div.appendChild(br);
-        
-        const input = document.createElement('input'); 
+
+        const input = document.createElement('input');
         input.type = 'date';
         input.name = 'date2';
         input.setAttribute('id', 'date2');
         div.appendChild(input);
-
-
-        const br = document.createElement('br');
-        div.appendChild(br);
 
         document.createElement('input');
 
