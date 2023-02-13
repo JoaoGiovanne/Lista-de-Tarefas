@@ -84,10 +84,6 @@ button.addEventListener('click', function () {
         spfin.appendChild(texto);
         spfin.classList.add('finalizado');
 
-        //const Editar = document.createElement('input');
-        //input.type = 'button';
-        //input.setAttribute('class', 'botao2');
-        //field_at.appendChild(Editar)
     } else if (current_month > term_month) {
 
         field_at.appendChild(div);
@@ -114,11 +110,6 @@ button.addEventListener('click', function () {
         texto = document.createTextNode('Finalizado');
         spfin.appendChild(texto);
         spfin.classList.add('finalizado');
-
-        //const Editar = document.createElement('input');
-        //input.type = 'button';
-        //input.setAttribute('class', 'botao2');
-        //field_at.appendChild(Editar)
 
     } else if (current_month == term_month) {
         if (current_day > term_day) {
@@ -172,20 +163,19 @@ button.addEventListener('click', function () {
             texto = document.createTextNode('Finalizado');
             spfin.appendChild(texto);
             spfin.classList.add('finalizado');
-            console.log('abc');
         }
     }
 });
 
 const checkbox2 = document.querySelector('.checkbox-input');
 
-checkbox2.addEventListener('change', function(){
+checkbox2.addEventListener('change', function () {
 
     myFunction();
 
 });
 
-function myFunction(){
+function myFunction() {
     alert('boa')
 }
 
