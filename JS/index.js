@@ -177,6 +177,17 @@ button.addEventListener('click', function () {
     }
 });
 
+const checkbox2 = document.querySelector('.checkbox-input');
+
+checkbox2.addEventListener('change', function(){
+
+    myFunction();
+
+});
+
+function myFunction(){
+    alert('boa')
+}
 
 
 
