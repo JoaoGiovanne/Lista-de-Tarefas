@@ -1,4 +1,4 @@
-
+// pegando ano atual do pc
 let today = new Date();
 let current_day = today.getDate();
 let current_month = today.getMonth() + 1;
@@ -6,37 +6,16 @@ let current_year = today.getFullYear();
 
 const button = document.getElementById('botao');
 
-const text = document.querySelector('#text');
-const text2 = document.querySelector('#text2');
-const container1 = document.querySelector('.container1');
-const container2 = document.querySelector('.container2');
-const container3 = document.querySelector('.container3');
-
+// lendo e armazenando os fieldsets e as divs de conteudo
 const field_np = document.getElementById('fieldset_noPrazo');
 const field_at = document.getElementById('fieldset_atrasado');
 const field_cp = document.getElementById('fieldset_completo');
 const div = document.createElement('div');
 
+//  criando elementos do conteudo
+
 const tarefa = document.createElement('h3');
 spfin = document.getElementsByTagName('span');
-
-const checkbox = document.createElement('input');
-checkbox.type = 'checkbox';
-checkbox.class = 'mycheckbox';
-container1.appendChild(checkbox);
-
-const checkboxContainer = document.createElement('div');
-checkboxContainer.appendChild(checkbox);
-container1.appendChild(checkboxContainer);
-
-const checkbox2 = document.createElement('input');
-checkbox2.type = 'checkbox';
-checkbox2.class = 'mycheckbox2';
-container2.appendChild(checkbox2);
-
-const checkboxContainer2 = document.createElement('div');
-checkboxContainer2.appendChild(checkbox2);
-container2.appendChild(checkboxContainer2);
 
 button.addEventListener('click', function () {
 
@@ -73,10 +52,6 @@ button.addEventListener('click', function () {
     document.getElementById('numDate').value = "dd/mm/aaaa";
 
     const nome_tarefa = document.getElementById('txtTaf').value;
-    const Editar = document.querySelector('.botao2');
-    const contAtra = document.getElementById('conteudoAtra');
-    const contProz = document.getElementById('conteudoPraz');
-    const conteudoComp = document.getElementById('conteudoCompl');
 
 
     if (current_year > term_year) { // current -> referente ao dia, mes e ano atual, term -> referente ao prazo digitado(dia, mes e)
@@ -184,31 +159,9 @@ button.addEventListener('click', function () {
             texto = document.createTextNode('Finalizado');
             spfin.appendChild(texto);
             spfin.classList.add('finalizado');
+
         }
     }
 });
-
-checkbox.addEventListener('change', function () {
-    if (checkbox.checked) {
-        container3.appendChild(checkboxContainer);
-        container3.appendChild(text);
-    }
-    else {
-        container1.appendChild(checkboxContainer);
-        container1.appendChild(text);
-    }
-});
-
-checkbox2.addEventListener('change', function () {
-    if (checkbox2.checked) {
-        container3.appendChild(checkboxContainer2);
-        container3.appendChild(text2);
-    }
-    else {
-        container2.appendChild(checkboxContainer2);
-        container2.appendChild(text2);
-    }
-});
-
 
 

@@ -83,7 +83,7 @@ h1 {
     cursor: pointer;
 }
 
-#tarefa1, #tarefa2, #tarefa3 {
+.pagCont {
     font-size: 93%;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -117,7 +117,7 @@ h1 {
     color: rgb(32, 0, 175);
 }
 
-#date1, #date2, #date3 {
+.date2 {
     width: 50%;
     border: 0;
     padding-right: 32px;
@@ -131,13 +131,13 @@ h1 {
     margin-left: 1%;
 }
 
-#checkbox1, #checkbox2, #checkbox3 {
+.checkbox {
     position: relative;
     margin-top: 1.5px;
     margin-left: 15%;
 }
 
-#finalizado1, #finalizado2, #finalizado3 {
+.finalizado {
     float: right;
 }
 
