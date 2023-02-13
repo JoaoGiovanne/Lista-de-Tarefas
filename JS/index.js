@@ -6,12 +6,6 @@ let current_year = today.getFullYear();
 
 const button = document.getElementById('botao');
 
-const text = document.querySelector('#text');
-const text2 = document.querySelector('#text2');
-const container1 = document.querySelector('.container1');
-const container2 = document.querySelector('.container2');
-const container3 = document.querySelector('.container3');
-
 const field_np = document.getElementById('fieldset_noPrazo');
 const field_at = document.getElementById('fieldset_atrasado');
 const field_cp = document.getElementById('fieldset_completo');
@@ -19,24 +13,6 @@ const div = document.createElement('div');
 
 const tarefa = document.createElement('h3');
 spfin = document.getElementsByTagName('span');
-
-const checkbox = document.createElement('input');
-checkbox.type = 'checkbox';
-checkbox.class = 'mycheckbox';
-container1.appendChild(checkbox);
-
-const checkboxContainer = document.createElement('div');
-checkboxContainer.appendChild(checkbox);
-container1.appendChild(checkboxContainer);
-
-const checkbox2 = document.createElement('input');
-checkbox2.type = 'checkbox';
-checkbox2.class = 'mycheckbox2';
-container2.appendChild(checkbox2);
-
-const checkboxContainer2 = document.createElement('div');
-checkboxContainer2.appendChild(checkbox2);
-container2.appendChild(checkboxContainer2);
 
 button.addEventListener('click', function () {
 
@@ -94,10 +70,10 @@ button.addEventListener('click', function () {
         input.setAttribute('class', 'date2');
         div.appendChild(input);
 
-        const checkbox = document.createElement('input');
-        checkbox.setAttribute('type', 'checkbox');
-        div.appendChild(checkbox);
-        checkbox.classList.add('checkbox');
+        const checkbox2 = document.createElement('input');
+        checkbox2.type = 'checkbox';
+        checkbox2.class = 'checkbox';
+        container2.appendChild(checkbox2);
 
         spfin = document.createElement('span');
         div.appendChild(spfin);
@@ -121,10 +97,10 @@ button.addEventListener('click', function () {
         input.setAttribute('class', 'date2');
         div.appendChild(input);
 
-        const checkbox = document.createElement('input');
-        checkbox.setAttribute('type', 'checkbox');
-        div.appendChild(checkbox);
-        checkbox.classList.add('checkbox');
+        const checkbox2 = document.createElement('input');
+        checkbox2.type = 'checkbox';
+        checkbox2.class = 'checkbox';
+        container2.appendChild(checkbox2);
 
         spfin = document.createElement('span');
         div.appendChild(spfin);
@@ -148,10 +124,10 @@ button.addEventListener('click', function () {
             input.setAttribute('class', 'date2');
             div.appendChild(input);
 
-            const checkbox = document.createElement('input');
-            checkbox.setAttribute('type', 'checkbox');
-            div.appendChild(checkbox);
-            checkbox.classList.add('checkbox');
+            const checkbox2 = document.createElement('input');
+            checkbox2.type = 'checkbox';
+            checkbox2.class = 'checkbox';
+            container2.appendChild(checkbox2);
 
             spfin = document.createElement('span');
             div.appendChild(spfin);
@@ -175,9 +151,9 @@ button.addEventListener('click', function () {
             div.appendChild(input);
 
             const checkbox = document.createElement('input');
-            checkbox.setAttribute('type', 'checkbox');
-            div.appendChild(checkbox);
-            checkbox.classList.add('checkbox');
+            checkbox.type = 'checkbox';
+            checkbox.class = 'checkbox';//
+            container.appendChild(checkbox);
 
             spfin = document.createElement('span');
             div.appendChild(spfin);
@@ -188,27 +164,52 @@ button.addEventListener('click', function () {
     }
 });
 
+const container1 = document.querySelector('#container-left');
+const container2 = document.querySelector('#container-center');
+const container3 = document.querySelector('#container-rigth');
+
+const checkboxContainer = document.createElement('div');
+checkboxContainer.appendChild(checkbox);
+container1.appendChild(checkboxContainer);
+
+const checkboxContainer2 = document.createElement('div');
+checkboxContainer2.appendChild(checkbox2);
+container2.appendChild(checkboxContainer2);
+
 checkbox.addEventListener('change', function () {
     if (checkbox.checked) {
         container3.appendChild(checkboxContainer);
-        container3.appendChild(text);
+        container3.appendChild(spfin);
+        texto = document.createTextNode('Finalizado');
+        spfin.appendChild(texto);
+        spfin.classList.add('finalizado');
+
     }
     else {
         container1.appendChild(checkboxContainer);
-        container1.appendChild(text);
+        container1.appendChild(spfin);
+        texto = document.createTextNode('Finalizado');
+        spfin.appendChild(texto);
+        spfin.classList.add('finalizado');
+
     }
 });
 
 checkbox2.addEventListener('change', function () {
     if (checkbox2.checked) {
         container3.appendChild(checkboxContainer2);
-        container3.appendChild(text2);
+        container3.appendChild(spfin);
+        texto = document.createTextNode('Finalizado');
+        spfin.appendChild(texto);
+        spfin.classList.add('finalizado');
+
     }
     else {
         container2.appendChild(checkboxContainer2);
-        container2.appendChild(text2);
+        container2.appendChild(spfin);
+        texto = document.createTextNode('Finalizado');
+        spfin.appendChild(texto);
+        spfin.classList.add('finalizado');
+
     }
 });
-
-
-
