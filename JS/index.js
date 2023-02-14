@@ -11,10 +11,12 @@ const field_np = document.getElementById('fieldset_noPrazo');
 const field_at = document.getElementById('fieldset_atrasado');
 const field_cp = document.getElementById('fieldset_completo');
 const div = document.createElement('div');
+const div2 = document.createElement('div');
+const tarefa = document.createElement('h3');
+const tarefa2 = document.createElement('h3');
 
 //  criando elementos do conteudo
 
-const tarefa = document.createElement('h3');
 spfin = document.getElementsByTagName('span');
 
 button.addEventListener('click', function () {
@@ -135,27 +137,27 @@ button.addEventListener('click', function () {
             spfin.classList.add('finalizado');
             console.log('abc');
         } else {
-            field_np.appendChild(div);
-            div.setAttribute('id', 'conteudoPraz')
+            field_np.appendChild(div2);
+            div2.setAttribute('id', 'conteudoPraz')
 
-            div.appendChild(tarefa);
-            tarefa.classList.add("pagCont");
-            tarefa.innerHTML = nome_tarefa;
+            div2.appendChild(tarefa2);
+            tarefa2.classList.add("pagCont");
+            tarefa2.innerHTML = nome_tarefa;
             const br = document.createElement('br');
-            div.appendChild(br);
+            div2.appendChild(br);
 
             const input = document.createElement('input');
             input.type = 'date';
             input.setAttribute('class', 'date2');
-            div.appendChild(input);
+            div2.appendChild(input);
 
             const checkbox = document.createElement('input');
             checkbox.setAttribute('type', 'checkbox');
-            div.appendChild(checkbox);
+            div2.appendChild(checkbox);
             checkbox.classList.add('checkbox');
 
             spfin = document.createElement('span');
-            div.appendChild(spfin);
+            div2.appendChild(spfin);
             texto = document.createTextNode('Finalizado');
             spfin.appendChild(texto);
             spfin.classList.add('finalizado');
