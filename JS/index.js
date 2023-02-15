@@ -1,4 +1,4 @@
-
+// pegando ano atual do pc
 let today = new Date();
 let current_day = today.getDate();
 let current_month = today.getMonth() + 1;
@@ -6,12 +6,20 @@ let current_year = today.getFullYear();
 
 const button = document.getElementById('botao');
 
+<<<<<<< HEAD
+=======
+// lendo e armazenando os fieldsets e as divs de conteudo
+>>>>>>> 4c9610ff160273bdae104aec7f56442f984e41dd
 const field_np = document.getElementById('fieldset_noPrazo');
 const field_at = document.getElementById('fieldset_atrasado');
 const field_cp = document.getElementById('fieldset_completo');
 const div = document.createElement('div');
-
+const div2 = document.createElement('div');
 const tarefa = document.createElement('h3');
+const tarefa2 = document.createElement('h3');
+
+//  criando elementos do conteudo
+
 spfin = document.getElementsByTagName('span');
 
 button.addEventListener('click', function () {
@@ -49,10 +57,6 @@ button.addEventListener('click', function () {
     document.getElementById('numDate').value = "dd/mm/aaaa";
 
     const nome_tarefa = document.getElementById('txtTaf').value;
-    const Editar = document.querySelector('.botao2');
-    const contAtra = document.getElementById('conteudoAtra');
-    const contProz = document.getElementById('conteudoPraz');
-    const conteudoComp = document.getElementById('conteudoCompl');
 
 
     if (current_year > term_year) { // current -> referente ao dia, mes e ano atual, term -> referente ao prazo digitado(dia, mes e)
@@ -136,34 +140,42 @@ button.addEventListener('click', function () {
             spfin.classList.add('finalizado');
             console.log('abc');
         } else {
-            field_np.appendChild(div);
-            div.setAttribute('id', 'conteudoPraz')
+            field_np.appendChild(div2);
+            div2.setAttribute('id', 'conteudoPraz')
 
-            div.appendChild(tarefa);
-            tarefa.classList.add("pagCont");
-            tarefa.innerHTML = nome_tarefa;
+            div2.appendChild(tarefa2);
+            tarefa2.classList.add("pagCont");
+            tarefa2.innerHTML = nome_tarefa;
             const br = document.createElement('br');
-            div.appendChild(br);
+            div2.appendChild(br);
 
             const input = document.createElement('input');
             input.type = 'date';
             input.setAttribute('class', 'date2');
-            div.appendChild(input);
+            div2.appendChild(input);
 
             const checkbox = document.createElement('input');
+<<<<<<< HEAD
             checkbox.type = 'checkbox';
             checkbox.class = 'checkbox';//
             container.appendChild(checkbox);
+=======
+            checkbox.setAttribute('type', 'checkbox');
+            div2.appendChild(checkbox);
+            checkbox.classList.add('checkbox');
+>>>>>>> 4c9610ff160273bdae104aec7f56442f984e41dd
 
             spfin = document.createElement('span');
-            div.appendChild(spfin);
+            div2.appendChild(spfin);
             texto = document.createTextNode('Finalizado');
             spfin.appendChild(texto);
             spfin.classList.add('finalizado');
+
         }
     }
 });
 
+<<<<<<< HEAD
 const container1 = document.querySelector('#container-left');
 const container2 = document.querySelector('#container-center');
 const container3 = document.querySelector('#container-rigth');
@@ -213,3 +225,6 @@ checkbox2.addEventListener('change', function () {
 
     }
 });
+=======
+
+>>>>>>> 4c9610ff160273bdae104aec7f56442f984e41dd
