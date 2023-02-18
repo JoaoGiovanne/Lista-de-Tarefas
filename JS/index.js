@@ -6,17 +6,11 @@ let current_year = today.getFullYear();
 
 const button = document.getElementById('botao');
 
-<<<<<<< HEAD
-=======
-// lendo e armazenando os fieldsets e as divs de conteudo
->>>>>>> 4c9610ff160273bdae104aec7f56442f984e41dd
 const field_np = document.getElementById('fieldset_noPrazo');
 const field_at = document.getElementById('fieldset_atrasado');
 const field_cp = document.getElementById('fieldset_completo');
 const div = document.createElement('div');
 const div2 = document.createElement('div');
-const tarefa = document.createElement('h3');
-const tarefa2 = document.createElement('h3');
 
 //  criando elementos do conteudo
 
@@ -56,16 +50,20 @@ button.addEventListener('click', function () {
 
     document.getElementById('numDate').value = "dd/mm/aaaa";
 
-    const nome_tarefa = document.getElementById('txtTaf').value;
+    const nome_tarefa = document.getElementById('txtTaf');
 
 
     if (current_year > term_year) { // current -> referente ao dia, mes e ano atual, term -> referente ao prazo digitado(dia, mes e)
         field_at.appendChild(div);
         div.setAttribute('id', 'conteudoAtra')
 
-        div.appendChild(tarefa);
-        tarefa.classList.add("pagCont");
-        tarefa.innerHTML = nome_tarefa;
+        const name_trf = nome_tarefa.value;
+        const newh3 = document.createElement('h3');
+        newh3.classList.add('pagCont');
+        const newcontent = document.createTextNode(name_trf);
+        newh3.appendChild(newcontent);
+        div.appendChild(newh3);
+
         const br = document.createElement('br');
         div.appendChild(br);
 
@@ -90,9 +88,13 @@ button.addEventListener('click', function () {
         field_at.appendChild(div);
         div.setAttribute('id', 'conteudoAtra')
 
-        div.appendChild(tarefa);
-        tarefa.classList.add("pagCont");
-        tarefa.innerHTML = nome_tarefa;
+        const name_trf = nome_tarefa.value;
+        const newh3 = document.createElement('h3');
+        newh3.classList.add('pagCont');
+        const newcontent = document.createTextNode(name_trf);
+        newh3.appendChild(newcontent);
+        div.appendChild(newh3);
+
         const br = document.createElement('br');
         div.appendChild(br);
 
@@ -117,9 +119,13 @@ button.addEventListener('click', function () {
             field_at.appendChild(div);
             div.setAttribute('id', 'conteudoAtra')
 
-            div.appendChild(tarefa);
-            tarefa.classList.add("pagCont");
-            tarefa.innerHTML = nome_tarefa;
+            const name_trf = nome_tarefa.value;
+            const newh3 = document.createElement('h3');
+            newh3.classList.add('pagCont');
+            const newcontent = document.createTextNode(name_trf);
+            newh3.appendChild(newcontent);
+            div.appendChild(newh3);
+
             const br = document.createElement('br');
             div.appendChild(br);
 
@@ -143,9 +149,13 @@ button.addEventListener('click', function () {
             field_np.appendChild(div2);
             div2.setAttribute('id', 'conteudoPraz')
 
-            div2.appendChild(tarefa2);
-            tarefa2.classList.add("pagCont");
-            tarefa2.innerHTML = nome_tarefa;
+            const name_trf = nome_tarefa.value;
+            const newh3 = document.createElement('h3');
+            newh3.classList.add('pagCont');
+            const newcontent = document.createTextNode(name_trf);
+            newh3.appendChild(newcontent);
+            div2.appendChild(newh3);
+
             const br = document.createElement('br');
             div2.appendChild(br);
 
@@ -155,15 +165,15 @@ button.addEventListener('click', function () {
             div2.appendChild(input);
 
             const checkbox = document.createElement('input');
-<<<<<<< HEAD
+
             checkbox.type = 'checkbox';
             checkbox.class = 'checkbox';//
             container.appendChild(checkbox);
-=======
+
             checkbox.setAttribute('type', 'checkbox');
             div2.appendChild(checkbox);
             checkbox.classList.add('checkbox');
->>>>>>> 4c9610ff160273bdae104aec7f56442f984e41dd
+
 
             spfin = document.createElement('span');
             div2.appendChild(spfin);
@@ -175,7 +185,6 @@ button.addEventListener('click', function () {
     }
 });
 
-<<<<<<< HEAD
 const container1 = document.querySelector('#container-left');
 const container2 = document.querySelector('#container-center');
 const container3 = document.querySelector('#container-rigth');
@@ -225,6 +234,3 @@ checkbox2.addEventListener('change', function () {
 
     }
 });
-=======
-
->>>>>>> 4c9610ff160273bdae104aec7f56442f984e41dd
