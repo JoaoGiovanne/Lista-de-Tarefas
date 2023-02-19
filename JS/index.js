@@ -52,6 +52,7 @@ button.addEventListener('click', function () {
 
     const nome_tarefa = document.getElementById('txtTaf');
     const name_trf = nome_tarefa.value;
+    document.getElementById('txtTaf').value = '';
 
 
     if (current_year > term_year) { // current -> referente ao dia, mes e ano atual, term -> referente ao prazo digitado(dia, mes e)
