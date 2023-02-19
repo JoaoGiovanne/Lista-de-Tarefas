@@ -51,75 +51,17 @@ button.addEventListener('click', function () {
     document.getElementById('numDate').value = "dd/mm/aaaa";
 
     const nome_tarefa = document.getElementById('txtTaf');
+    const name_trf = nome_tarefa.value;
 
 
     if (current_year > term_year) { // current -> referente ao dia, mes e ano atual, term -> referente ao prazo digitado(dia, mes e)
-        field_at.appendChild(div);
-        div.setAttribute('id', 'conteudoAtra')
+        if (name_trf.trim() === '') {
+            alert('Digite o nome da tarefa !!!');
+        } else {
 
-        const name_trf = nome_tarefa.value;
-        const newh3 = document.createElement('h3');
-        newh3.classList.add('pagCont');
-        const newcontent = document.createTextNode(name_trf);
-        newh3.appendChild(newcontent);
-        div.appendChild(newh3);
-
-        const br = document.createElement('br');
-        div.appendChild(br);
-
-        const input = document.createElement('input');
-        input.type = 'date';
-        input.setAttribute('class', 'date2');
-        div.appendChild(input);
-
-        const checkbox2 = document.createElement('input');
-        checkbox2.type = 'checkbox';
-        checkbox2.class = 'checkbox';
-        container2.appendChild(checkbox2);
-
-        spfin = document.createElement('span');
-        div.appendChild(spfin);
-        texto = document.createTextNode('Finalizado');
-        spfin.appendChild(texto);
-        spfin.classList.add('finalizado');
-
-    } else if (current_month > term_month) {
-
-        field_at.appendChild(div);
-        div.setAttribute('id', 'conteudoAtra')
-
-        const name_trf = nome_tarefa.value;
-        const newh3 = document.createElement('h3');
-        newh3.classList.add('pagCont');
-        const newcontent = document.createTextNode(name_trf);
-        newh3.appendChild(newcontent);
-        div.appendChild(newh3);
-
-        const br = document.createElement('br');
-        div.appendChild(br);
-
-        const input = document.createElement('input');
-        input.type = 'date';
-        input.setAttribute('class', 'date2');
-        div.appendChild(input);
-
-        const checkbox2 = document.createElement('input');
-        checkbox2.type = 'checkbox';
-        checkbox2.class = 'checkbox';
-        container2.appendChild(checkbox2);
-
-        spfin = document.createElement('span');
-        div.appendChild(spfin);
-        texto = document.createTextNode('Finalizado');
-        spfin.appendChild(texto);
-        spfin.classList.add('finalizado');
-
-    } else if (current_month == term_month) {
-        if (current_day > term_day) {
             field_at.appendChild(div);
             div.setAttribute('id', 'conteudoAtra')
 
-            const name_trf = nome_tarefa.value;
             const newh3 = document.createElement('h3');
             newh3.classList.add('pagCont');
             const newcontent = document.createTextNode(name_trf);
@@ -144,12 +86,119 @@ button.addEventListener('click', function () {
             texto = document.createTextNode('Finalizado');
             spfin.appendChild(texto);
             spfin.classList.add('finalizado');
-            console.log('abc');
+        }
+    } else if (current_month > term_month) {
+        if (name_trf.trim() === '') {
+            alert('Digite o nome da tarefa !!!');
+        } else {
+
+            field_at.appendChild(div);
+            div.setAttribute('id', 'conteudoAtra')
+
+            const newh3 = document.createElement('h3');
+            newh3.classList.add('pagCont');
+            const newcontent = document.createTextNode(name_trf);
+            newh3.appendChild(newcontent);
+            div.appendChild(newh3);
+
+            const br = document.createElement('br');
+            div.appendChild(br);
+
+            const input = document.createElement('input');
+            input.type = 'date';
+            input.setAttribute('class', 'date2');
+            div.appendChild(input);
+
+            const checkbox2 = document.createElement('input');
+            checkbox2.type = 'checkbox';
+            checkbox2.class = 'checkbox';
+            container2.appendChild(checkbox2);
+
+            spfin = document.createElement('span');
+            div.appendChild(spfin);
+            texto = document.createTextNode('Finalizado');
+            spfin.appendChild(texto);
+            spfin.classList.add('finalizado');
+        }
+    } else if (current_month == term_month) {
+        if (current_day > term_day) {
+            if (name_trf.trim() === '') {
+                alert('Digite o nome da tarefa !!!');
+            } else {
+                field_at.appendChild(div);
+                div.setAttribute('id', 'conteudoAtra')
+
+                const newh3 = document.createElement('h3');
+                newh3.classList.add('pagCont');
+                const newcontent = document.createTextNode(name_trf);
+                newh3.appendChild(newcontent);
+                div.appendChild(newh3);
+
+                const br = document.createElement('br');
+                div.appendChild(br);
+
+                const input = document.createElement('input');
+                input.type = 'date';
+                input.setAttribute('class', 'date2');
+                div.appendChild(input);
+
+                const checkbox2 = document.createElement('input');
+                checkbox2.type = 'checkbox';
+                checkbox2.class = 'checkbox';
+                container2.appendChild(checkbox2);
+
+                spfin = document.createElement('span');
+                div.appendChild(spfin);
+                texto = document.createTextNode('Finalizado');
+                spfin.appendChild(texto);
+                spfin.classList.add('finalizado');
+            }
+        } else {
+            if (name_trf.trim() === '') {
+                alert('Digite o nome da tarefa !!!');
+            } else {
+                field_np.appendChild(div2);
+                div2.setAttribute('id', 'conteudoPraz');
+
+                const newh3 = document.createElement('h3');
+                newh3.classList.add('pagCont');
+                const newcontent = document.createTextNode(name_trf);
+                newh3.appendChild(newcontent);
+                div2.appendChild(newh3);
+
+                const br = document.createElement('br');
+                div2.appendChild(br);
+
+                const input = document.createElement('input');
+                input.type = 'date';
+                input.setAttribute('class', 'date2');
+                div2.appendChild(input);
+
+                const checkbox = document.createElement('input');
+
+                checkbox.type = 'checkbox';
+                checkbox.class = 'checkbox';//
+                container.appendChild(checkbox);
+
+                checkbox.setAttribute('type', 'checkbox');
+                div2.appendChild(checkbox);
+                checkbox.classList.add('checkbox');
+
+
+                spfin = document.createElement('span');
+                div2.appendChild(spfin);
+                texto = document.createTextNode('Finalizado');
+                spfin.appendChild(texto);
+                spfin.classList.add('finalizado');
+            }
+        }
+    } else {
+        if (name_trf.trim() === '') {
+            alert('Digite o nome da tarefa !!!');
         } else {
             field_np.appendChild(div2);
-            div2.setAttribute('id', 'conteudoPraz')
+            div2.setAttribute('id', 'conteudoPraz');
 
-            const name_trf = nome_tarefa.value;
             const newh3 = document.createElement('h3');
             newh3.classList.add('pagCont');
             const newcontent = document.createTextNode(name_trf);
@@ -180,7 +229,6 @@ button.addEventListener('click', function () {
             texto = document.createTextNode('Finalizado');
             spfin.appendChild(texto);
             spfin.classList.add('finalizado');
-
         }
     }
 });
