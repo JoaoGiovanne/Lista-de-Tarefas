@@ -191,12 +191,12 @@ button.addEventListener('click', function () {
                 div2.appendChild(checkbox);
                 checkbox.classList.add('checkbox');
 
-
                 spfin = document.createElement('span');
                 div2.appendChild(spfin);
                 texto = document.createTextNode('Finalizado');
                 spfin.appendChild(texto);
                 spfin.classList.add('finalizado');
+                input_date.value = '';
             }
         }
     } else {
@@ -240,7 +240,6 @@ button.addEventListener('click', function () {
         }
     }
 });
-
 // const container1 = document.querySelector('#container-left');
 // const container2 = document.querySelector('#container-center');
 // const container3 = document.querySelector('#container-rigth');
