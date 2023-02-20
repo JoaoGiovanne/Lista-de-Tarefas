@@ -11,6 +11,7 @@ const field_at = document.getElementById('fieldset_atrasado');
 const field_cp = document.getElementById('fieldset_completo');
 const div = document.createElement('div');
 const div2 = document.createElement('div');
+const input_date = document.getElementById('numDate');
 
 //  criando elementos do conteudo
 
@@ -48,8 +49,6 @@ button.addEventListener('click', function () {
         term_year++;
     }
 
-    document.getElementById('numDate').value = "dd/mm/aaaa";
-
     const nome_tarefa = document.getElementById('txtTaf');
     const name_trf = nome_tarefa.value;
     document.getElementById('txtTaf').value = '';
@@ -76,6 +75,8 @@ button.addEventListener('click', function () {
             input.type = 'date';
             input.setAttribute('class', 'date2');
             div.appendChild(input);
+            const input_date2 = document.querySelector('.date2');
+            input_date2.value = input_date.value;
 
             const checkbox2 = document.createElement('input');
             checkbox2.type = 'checkbox';
@@ -109,6 +110,8 @@ button.addEventListener('click', function () {
             input.type = 'date';
             input.setAttribute('class', 'date2');
             div.appendChild(input);
+            const input_date2 = document.querySelector('.date2');
+            input_date2.value = input_date.value;
 
             const checkbox2 = document.createElement('input');
             checkbox2.type = 'checkbox';
@@ -142,6 +145,8 @@ button.addEventListener('click', function () {
                 input.type = 'date';
                 input.setAttribute('class', 'date2');
                 div.appendChild(input);
+                const input_date2 = document.querySelector('.date2');
+                input_date2.value = input_date.value;
 
                 const checkbox2 = document.createElement('input');
                 checkbox2.type = 'checkbox';
@@ -174,13 +179,14 @@ button.addEventListener('click', function () {
                 input.type = 'date';
                 input.setAttribute('class', 'date2');
                 div2.appendChild(input);
+                const input_date2 = document.querySelector('.date2');
+                input_date2.value = input_date.value;
 
                 const checkbox = document.createElement('input');
 
                 checkbox.type = 'checkbox';
-                checkbox.class = 'checkbox';//
+                checkbox.class = 'checkbox';
                 container.appendChild(checkbox);
-
                 checkbox.setAttribute('type', 'checkbox');
                 div2.appendChild(checkbox);
                 checkbox.classList.add('checkbox');
@@ -213,17 +219,18 @@ button.addEventListener('click', function () {
             input.type = 'date';
             input.setAttribute('class', 'date2');
             div2.appendChild(input);
+            const input_date2 = document.querySelector('.date2');
+            input_date2.value = input_date.value;
 
             const checkbox = document.createElement('input');
 
             checkbox.type = 'checkbox';
-            checkbox.class = 'checkbox';//
+            checkbox.class = 'checkbox';
             container.appendChild(checkbox);
 
             checkbox.setAttribute('type', 'checkbox');
             div2.appendChild(checkbox);
             checkbox.classList.add('checkbox');
-
 
             spfin = document.createElement('span');
             div2.appendChild(spfin);
@@ -234,52 +241,52 @@ button.addEventListener('click', function () {
     }
 });
 
-const container1 = document.querySelector('#container-left');
-const container2 = document.querySelector('#container-center');
-const container3 = document.querySelector('#container-rigth');
+// const container1 = document.querySelector('#container-left');
+// const container2 = document.querySelector('#container-center');
+// const container3 = document.querySelector('#container-rigth');
 
-const checkboxContainer = document.createElement('div');
-checkboxContainer.appendChild(checkbox);
-container1.appendChild(checkboxContainer);
+// const checkboxContainer = document.createElement('div');
+// checkboxContainer.appendChild(checkbox);
+// container1.appendChild(checkboxContainer);
 
-const checkboxContainer2 = document.createElement('div');
-checkboxContainer2.appendChild(checkbox2);
-container2.appendChild(checkboxContainer2);
+// const checkboxContainer2 = document.createElement('div');
+// checkboxContainer2.appendChild(checkbox2);
+// container2.appendChild(checkboxContainer2);
 
-checkbox.addEventListener('change', function () {
-    if (checkbox.checked) {
-        container3.appendChild(checkboxContainer);
-        container3.appendChild(spfin);
-        texto = document.createTextNode('Finalizado');
-        spfin.appendChild(texto);
-        spfin.classList.add('finalizado');
+// checkbox.addEventListener('change', function () {
+//     if (checkbox.checked) {
+//         container3.appendChild(checkboxContainer);
+//         container3.appendChild(spfin);
+//         texto = document.createTextNode('Finalizado');
+//         spfin.appendChild(texto);
+//         spfin.classList.add('finalizado');
 
-    }
-    else {
-        container1.appendChild(checkboxContainer);
-        container1.appendChild(spfin);
-        texto = document.createTextNode('Finalizado');
-        spfin.appendChild(texto);
-        spfin.classList.add('finalizado');
+//     }
+//     else {
+//         container1.appendChild(checkboxContainer);
+//         container1.appendChild(spfin);
+//         texto = document.createTextNode('Finalizado');
+//         spfin.appendChild(texto);
+//         spfin.classList.add('finalizado');
 
-    }
-});
+//     }
+// });
 
-checkbox2.addEventListener('change', function () {
-    if (checkbox2.checked) {
-        container3.appendChild(checkboxContainer2);
-        container3.appendChild(spfin);
-        texto = document.createTextNode('Finalizado');
-        spfin.appendChild(texto);
-        spfin.classList.add('finalizado');
+// checkbox2.addEventListener('change', function () {
+//     if (checkbox2.checked) {
+//         container3.appendChild(checkboxContainer2);
+//         container3.appendChild(spfin);
+//         texto = document.createTextNode('Finalizado');
+//         spfin.appendChild(texto);
+//         spfin.classList.add('finalizado');
 
-    }
-    else {
-        container2.appendChild(checkboxContainer2);
-        container2.appendChild(spfin);
-        texto = document.createTextNode('Finalizado');
-        spfin.appendChild(texto);
-        spfin.classList.add('finalizado');
+//     }
+//     else {
+//         container2.appendChild(checkboxContainer2);
+//         container2.appendChild(spfin);
+//         texto = document.createTextNode('Finalizado');
+//         spfin.appendChild(texto);
+//         spfin.classList.add('finalizado');
 
-    }
-});
+//     }
+// });
