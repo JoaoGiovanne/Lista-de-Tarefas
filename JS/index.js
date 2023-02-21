@@ -53,6 +53,24 @@ button.addEventListener('click', function () {
     const name_trf = nome_tarefa.value;
     document.getElementById('txtTaf').value = '';
 
+    function InputNP() {
+        const newinput = document.createElement('input');
+        newinput.type = 'date';
+        newinput.value = input_date.value;
+        newinput.setAttribute('class', 'date2');
+        newinput.setAttribute('readonly', true);
+        div2.appendChild(newinput);
+        input_date.value = '';
+    }
+    function InputAT() {
+        const newinput = document.createElement('input');
+        newinput.type = 'date';
+        newinput.value = input_date.value;
+        newinput.setAttribute('class', 'date2');
+        newinput.setAttribute('readonly', true);
+        div.appendChild(newinput);
+        input_date.value = '';
+    }
 
     if (current_year > term_year) { // current -> referente ao dia, mes e ano atual, term -> referente ao prazo digitado(dia, mes e)
         if (name_trf.trim() === '') {
@@ -71,12 +89,7 @@ button.addEventListener('click', function () {
             const br = document.createElement('br');
             div.appendChild(br);
 
-            const input = document.createElement('input');
-            input.type = 'date';
-            input.setAttribute('class', 'date2');
-            div.appendChild(input);
-            const input_date2 = document.querySelector('.date2');
-            input_date2.value = input_date.value;
+            InputAT();
 
             const checkbox2 = document.createElement('input');
             checkbox2.type = 'checkbox';
@@ -106,12 +119,7 @@ button.addEventListener('click', function () {
             const br = document.createElement('br');
             div.appendChild(br);
 
-            const input = document.createElement('input');
-            input.type = 'date';
-            input.setAttribute('class', 'date2');
-            div.appendChild(input);
-            const input_date2 = document.querySelector('.date2');
-            input_date2.value = input_date.value;
+            InputAT();
 
             const checkbox2 = document.createElement('input');
             checkbox2.type = 'checkbox';
@@ -141,12 +149,7 @@ button.addEventListener('click', function () {
                 const br = document.createElement('br');
                 div.appendChild(br);
 
-                const input = document.createElement('input');
-                input.type = 'date';
-                input.setAttribute('class', 'date2');
-                div.appendChild(input);
-                const input_date2 = document.querySelector('.date2');
-                input_date2.value = input_date.value;
+                InputAT();
 
                 const checkbox2 = document.createElement('input');
                 checkbox2.type = 'checkbox';
@@ -175,12 +178,7 @@ button.addEventListener('click', function () {
                 const br = document.createElement('br');
                 div2.appendChild(br);
 
-                const input = document.createElement('input');
-                input.type = 'date';
-                input.setAttribute('class', 'date2');
-                div2.appendChild(input);
-                const input_date2 = document.querySelector('.date2');
-                input_date2.value = input_date.value;
+                InputNP();
 
                 const checkbox = document.createElement('input');
 
@@ -196,7 +194,7 @@ button.addEventListener('click', function () {
                 texto = document.createTextNode('Finalizado');
                 spfin.appendChild(texto);
                 spfin.classList.add('finalizado');
-                input_date.value = '';
+
             }
         }
     } else {
@@ -215,12 +213,7 @@ button.addEventListener('click', function () {
             const br = document.createElement('br');
             div2.appendChild(br);
 
-            const input = document.createElement('input');
-            input.type = 'date';
-            input.setAttribute('class', 'date2');
-            div2.appendChild(input);
-            const input_date2 = document.querySelector('.date2');
-            input_date2.value = input_date.value;
+            InputNP();
 
             const checkbox = document.createElement('input');
 
@@ -240,52 +233,4 @@ button.addEventListener('click', function () {
         }
     }
 });
-// const container1 = document.querySelector('#container-left');
-// const container2 = document.querySelector('#container-center');
-// const container3 = document.querySelector('#container-rigth');
 
-// const checkboxContainer = document.createElement('div');
-// checkboxContainer.appendChild(checkbox);
-// container1.appendChild(checkboxContainer);
-
-// const checkboxContainer2 = document.createElement('div');
-// checkboxContainer2.appendChild(checkbox2);
-// container2.appendChild(checkboxContainer2);
-
-// checkbox.addEventListener('change', function () {
-//     if (checkbox.checked) {
-//         container3.appendChild(checkboxContainer);
-//         container3.appendChild(spfin);
-//         texto = document.createTextNode('Finalizado');
-//         spfin.appendChild(texto);
-//         spfin.classList.add('finalizado');
-
-//     }
-//     else {
-//         container1.appendChild(checkboxContainer);
-//         container1.appendChild(spfin);
-//         texto = document.createTextNode('Finalizado');
-//         spfin.appendChild(texto);
-//         spfin.classList.add('finalizado');
-
-//     }
-// });
-
-// checkbox2.addEventListener('change', function () {
-//     if (checkbox2.checked) {
-//         container3.appendChild(checkboxContainer2);
-//         container3.appendChild(spfin);
-//         texto = document.createTextNode('Finalizado');
-//         spfin.appendChild(texto);
-//         spfin.classList.add('finalizado');
-
-//     }
-//     else {
-//         container2.appendChild(checkboxContainer2);
-//         container2.appendChild(spfin);
-//         texto = document.createTextNode('Finalizado');
-//         spfin.appendChild(texto);
-//         spfin.classList.add('finalizado');
-
-//     }
-// });

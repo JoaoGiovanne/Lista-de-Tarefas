@@ -142,6 +142,7 @@ label {
     width: 50%;
     border: 0;
     padding-right: 4px;
+    text-align: center;
 }
 
 .conteudo, .checkbox-input {

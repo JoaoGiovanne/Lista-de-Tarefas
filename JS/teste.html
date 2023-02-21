@@ -10,6 +10,7 @@
 
 <body>
     <input type="date" id="date1">
+    <div id="input-container"></div>
     <button onclick="transferirValor()">Transferir valor</button>
 
     <script>
@@ -18,33 +19,7 @@
             const novoInput = document.createElement('input');
             novoInput.type = 'date';
             novoInput.value = date1.value;
-            document.body.appendChild(novoInput);
-
-            // Limpa o valor do input original
-            date1.value = '';
-
-            // Adiciona um novo listener de evento para o novo input
-            novoInput.addEventListener('change', () => {
-                // Define o valor do próximo input criado com o valor atualizado
-                criarNovoInput(novoInput.value);
-            });
-        }
-
-        function criarNovoInput(valor) {
-            const novoInput = document.createElement('input');
-            novoInput.type = 'date';
-            novoInput.value = valor;
-            document.body.appendChild(novoInput);
-
-            // Limpa o valor do input anterior
-            const inputsAnteriores = document.querySelectorAll('input[type="date"]');
-            inputsAnteriores[inputsAnteriores.length - 2].value = '';
-
-            // Adiciona um novo listener de evento para o novo input
-            novoInput.addEventListener('change', () => {
-                // Define o valor do próximo input criado com o valor atualizado
-                criarNovoInput(novoInput.value);
-            });
+            document.getElementById('input-container').appendChild(novoInput);
         }
     </script>
 </body>
