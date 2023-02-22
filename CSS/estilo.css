@@ -46,6 +46,10 @@ label {
     border-radius: 7px;
     width: 15em;
     height: 2em;
+    color: #fff;
+    background-color: #262525;
+    border: 1px solid #454343;
+    padding: 0 5px 0 5px;
 }
 
 #numDate {
@@ -143,6 +147,8 @@ label {
     border: 0;
     padding-right: 4px;
     text-align: center;
+    color: #fff;
+    background-color: #1c1c1c;
 }
 
 .conteudo, .checkbox-input {

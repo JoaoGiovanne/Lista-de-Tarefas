@@ -73,7 +73,7 @@ button.addEventListener('click', function () {
     }
 
     if (current_year > term_year) { // current -> referente ao dia, mes e ano atual, term -> referente ao prazo digitado(dia, mes e)
-        if (name_trf.trim() === '') {
+        if (name_trf.trim() === '' || input_date.value === '') {
             alert('Digite o nome da tarefa !!!');
         } else {
 
@@ -103,8 +103,8 @@ button.addEventListener('click', function () {
             spfin.classList.add('finalizado');
         }
     } else if (current_month > term_month) {
-        if (name_trf.trim() === '') {
-            alert('Digite o nome da tarefa !!!');
+        if (name_trf.trim() === '' || input_date.value === '') {
+            alert('Preencha todos os campos !!!');
         } else {
 
             field_at.appendChild(div);
@@ -134,8 +134,8 @@ button.addEventListener('click', function () {
         }
     } else if (current_month == term_month) {
         if (current_day > term_day) {
-            if (name_trf.trim() === '') {
-                alert('Digite o nome da tarefa !!!');
+            if (name_trf.trim() === '' || input_date.value === '') {
+                alert('Preencha todos os campos !!!');
             } else {
                 field_at.appendChild(div);
                 div.setAttribute('id', 'conteudoAtra')
@@ -163,8 +163,8 @@ button.addEventListener('click', function () {
                 spfin.classList.add('finalizado');
             }
         } else {
-            if (name_trf.trim() === '') {
-                alert('Digite o nome da tarefa !!!');
+            if (name_trf.trim() === '' || input_date.value === '') {
+                alert('Preencha todos os campos !!!');
             } else {
                 field_np.appendChild(div2);
                 div2.setAttribute('id', 'conteudoPraz');
@@ -198,8 +198,8 @@ button.addEventListener('click', function () {
             }
         }
     } else {
-        if (name_trf.trim() === '') {
-            alert('Digite o nome da tarefa !!!');
+        if (name_trf.trim() === '' || input_date.value === '') {
+            alert('Preencha todos os campos !!!');
         } else {
             field_np.appendChild(div2);
             div2.setAttribute('id', 'conteudoPraz');
