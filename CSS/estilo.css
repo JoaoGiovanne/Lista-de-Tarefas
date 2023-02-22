@@ -37,8 +37,6 @@ label {
 
 #txtTaf {
     margin-top: 5em;
-    width: 15em;
-    height: 2em;
     margin-left: 0.5em;
 }
 
@@ -47,7 +45,7 @@ label {
     width: 15em;
     height: 2em;
     color: #fff;
-    background-color: #262525;
+    background-color: #313131;
     border: 1px solid #454343;
     padding: 0 5px 0 5px;
 }
@@ -55,6 +53,11 @@ label {
 #numDate {
     margin-top: 2em;
     margin-left: 0.9em;
+}
+
+#numDate::-webkit-calendar-picker-indicator {
+    background-color: #ffffff;
+    border-radius: 4.5px;
 }
 
 #botao {
